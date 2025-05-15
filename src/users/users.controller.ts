@@ -14,7 +14,7 @@ export class UsersController {
 
   @Get(':id')
   getUserById(@Param('id', ParseIntPipe) id: number) {
-    return 'This action returns a user by ID';
+    return this.usersService.getUserById(id);
   }
 
   @Patch(':id')
